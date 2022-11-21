@@ -73,6 +73,7 @@ int WINAPI WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _
 		//シーンチェンジ
 		if (keys[KEY_INPUT_SPACE] == 1 &&
 			oldkeys[KEY_INPUT_SPACE] == 0   ) {
+			//次のシーンを代入
 			sceneManager->ChangeScene(nextScene);
 		}
 
@@ -99,7 +100,7 @@ int WINAPI WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _
 		}
 
 		// 描画処理
-
+		//背景
 		DrawBox(0, 0, WIN_WIDTH, WIN_HEIGHT, color_, true);
 
 		DrawFormatString(100, 100, 0xffffff,
@@ -108,6 +109,7 @@ int WINAPI WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _
 		DrawFormatString(100, 120, 0xffffff,
 			"Press SPACE");
 
+		//現在と次のシーンを表示
 		DrawFormatString(0, 0, 0xffffff,
 			"NowScene  : ");
 		DrawFormatString(0, 20, 0xffffff,
